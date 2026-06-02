@@ -26,7 +26,6 @@
 15. [Team Credits](#15-team-credits)
 16. [References](#16-references)
 17. [AI Disclosure](#17-ai-disclosure)
-18. [Video Recording](#18-video-recording)
 
 ---
 
@@ -473,7 +472,7 @@ This section documents AI tools used during the GridIQ project, in keeping with 
 - **MongoDB infrastructure.** Produced the real `mongod` 7.0 download-and-launch pattern plus the `mongomock` fallback used in `noSQL/model_mongodb.ipynb`.
 - **Dashboard.** Generated the self-contained HTML/SVG dashboard (`Docs/GridIQ_Dashboard.html`) with hand-built charts and no external CDN dependencies.
 - **Presentation deck.** Built the 27-slide deck via `pptxgenjs`, including the embedded data-quality figures and the model-comparison summary.
-- **Documentation.** Drafted earlier and current revisions of this README and the team video presentation script.
+- **Documentation.** Drafted earlier and current revisions of this README.
 - **Cross-checking.** Identified inconsistencies between the deck and earlier README drafts; flagged the leaky 1.56% Prophet result before it became the reported headline.
 - **Neo4J.** Assisted in debugging the Neo4J load scripts.
 - **MySQL.** Converted the schema document into a SQL script to load for MySQL to help build out the EER diagram.
@@ -493,9 +492,6 @@ Every AI-generated artifact was reviewed by a human team member before being com
 
 No AI tool generated raw data, fabricated values, or wrote analysis without human review. All raw data comes from public sources (EIA-930 BALANCE files, Open-Meteo Historical Weather API, ERCOT). All model results in §10 were produced by executing the published notebooks on the validated staging dataset. The cross-checks between this README, the deck, the MongoDB validation output, and the Neo4J node/relationship counts represent independent verification that the numbers reported are internally consistent.
 
-## 18. Video Recording
-
-📹 [GridIQ team project recording](https://uchicago.zoom.us/rec/play/lTkaIUKQqqeGcRc6Pp6TxSCMqgbOomNi-aW2Pswfwpt-M7Lg5v0Aa8aCp4JAozERpd2kUcoCbywyAtqZ.HPMtVOSo8e67Si6g?accessLevel=&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&pwd=DM7CbeY0hHRMCW8veAAAIAAAABsneDe6pc6BcpgHU0VfNjAKhqrN2fnrNGhA-kJtPEDZfSnvqcUI9vN3i8dh8PFyyjAwMDAwNA&componentName=rec-play&originRequestUrl=https%3A%2F%2Fuchicago.zoom.us%2Frec%2Fshare%2FI3o0n6pwFfjZWgxqyKhupRMVQnYJg-OGuJWYcEGRnG4d3eY_zXF0jVyTvyeRjHfj.mKoJECwJxEbO-cZl%3Fpwd%3DDM7CbeY0hHRMCW8veAAAIAAAABsneDe6pc6BcpgHU0VfNjAKhqrN2fnrNGhA-kJtPEDZfSnvqcUI9vN3i8dh8PFyyjAwMDAwNA)
 
 ---
 
