@@ -1,0 +1,31 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# joblib / pipeline artifacts
+*.joblib
+*.pkl
+*.pickle
+
+# Google Colab / Drive artifacts
+.colab/
+drive/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
