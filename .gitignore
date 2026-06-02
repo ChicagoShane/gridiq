@@ -1,31 +1,101 @@
-﻿# Python
+# ─── Python ────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-*.pyo
-*.egg-info/
-dist/
+*$py.class
+*.so
+.Python
 build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+.eggs/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# joblib / pipeline artifacts
-*.joblib
-*.pkl
-*.pickle
-
-# Google Colab / Drive artifacts
-.colab/
-drive/
-
-# Environment
+# ─── Virtual environments ──────────────────────────────────────────
 .env
-.venv/
-venv/
+.venv
 env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# OS / IDE
+# ─── Jupyter / Colab ───────────────────────────────────────────────
+.ipynb_checkpoints/
+.colab/
+*.nbconvert.ipynb
+
+# ─── IDE / editor ──────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
+
+# ─── Raw data (too large for git; download from EIA-930) ───────────
+# Each EIA-930 BALANCE CSV is 40–48 MB; under GitHub's per-file 100 MB
+# limit, but the bulk would bloat the repo. Notebook 01 auto-downloads
+# any missing CSVs from https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/
+data/raw/*.csv
+data/raw/*.parquet
+EIA930_BALANCE_*.csv
+
+# ─── Staging / pipeline artifacts ──────────────────────────────────
+# The staging parquet (~1.3 MB) is small and is a key deliverable —
+# commit it so reviewers can reproduce model runs without re-corralling.
+# But joblib caches can run to hundreds of MB — exclude.
+data/staging/*.joblib
+*.joblib
+
+# Keep the canonical staging parquet:
+!data/staging/staging_ercot_hourly.parquet
+!data/staging/ercot_temperature.parquet
+
+# ─── Secrets ───────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+secrets.yaml
+secrets.json
+*.pem
+*.key
+
+# ─── Model artifacts (often large) ─────────────────────────────────
+models/*.pkl
+models/*.bin
+models/*.joblib
+*.pkl
+!Scripts/MODELS/utils/*.py        # keep python utility files
+
+# ─── Database dumps ────────────────────────────────────────────────
+*.sql.gz
+*.dump
+*.bak
+
+# ─── Logs / coverage ───────────────────────────────────────────────
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# ─── OS junk ───────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── Drive metadata (if cloning from synced Drive folder) ──────────
+.tmp.drivedownload/
+.tmp.driveupload/
+*.gdoc
+*.gsheet
+*.gslides
+*.gdraw
+
+# ─── Archive (don't commit Drive Archive folder if synced locally) ─
+Archive/
