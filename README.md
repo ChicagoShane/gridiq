@@ -142,7 +142,7 @@ Evaluation metrics: MAE, RMSE, MAPE, sMAPE, Bias, and skill score vs. EIA's day-
 |---|---|
 | Shane Dunkle | Data engineering lead · XGBoost model |
 | Joel Gallo | Team member |
-| Emmalucia *(last name TBD)* | Team member |
+| Emmalucia Elizondo | Team member |
 | Monica Para | Team member |
 
 ---
